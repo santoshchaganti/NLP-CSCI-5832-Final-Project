@@ -1,4 +1,4 @@
-# code adapted from 
+# code adapted from https://pypi.org/project/pytesseract/
 from PIL import Image
 import pytesseract
 
