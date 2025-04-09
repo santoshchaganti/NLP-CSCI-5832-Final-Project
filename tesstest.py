@@ -9,17 +9,17 @@ pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 # Example tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract'
 
 # Simple image to string
-print(pytesseract.image_to_string(Image.open('test2.png')))
+print(pytesseract.image_to_string(Image.open('test3.png')))
 
 # In order to bypass the image conversions of pytesseract, just use relative or absolute image path
 # NOTE: In this case you should provide tesseract supported images or tesseract will return error
-print(pytesseract.image_to_string('test2.png'))
+print(pytesseract.image_to_string('test3.png'))
 
 # List of available languages
 print(pytesseract.get_languages(config=''))
 
 # French text image to string
-print(pytesseract.image_to_string(Image.open('test2.png'), lang='jpn'))
+print(pytesseract.image_to_string(Image.open('test3.png'), lang='eng'))
 
 # Batch processing with a single file containing the list of multiple image file paths
 #print(pytesseract.image_to_string('images.txt'))
@@ -33,25 +33,25 @@ except RuntimeError as timeout_error:
     pass
 
 # Get bounding box estimates
-print(pytesseract.image_to_boxes(Image.open('test2.png')))
+print(pytesseract.image_to_boxes(Image.open('test3.png')))
 
 # Get verbose data including boxes, confidences, line and page numbers
-print(pytesseract.image_to_data(Image.open('test2.png')))
+print(pytesseract.image_to_data(Image.open('test3.png')))
 
 # Get information about orientation and script detection
-print(pytesseract.image_to_osd(Image.open('test2.png')))
+print(pytesseract.image_to_osd(Image.open('test3.png')))
 
 # Get a searchable PDF
-pdf = pytesseract.image_to_pdf_or_hocr('test2.png', extension='pdf')
+pdf = pytesseract.image_to_pdf_or_hocr('test3.png', extension='pdf')
 with open('test.pdf', 'w+b') as f:
     f.write(pdf) # pdf type is bytes by default
 
 # Get HOCR output
-hocr = pytesseract.image_to_pdf_or_hocr('test2.png', extension='hocr')
+hocr = pytesseract.image_to_pdf_or_hocr('test3.png', extension='hocr')
 
 # Get ALTO XML output
-xml = pytesseract.image_to_alto_xml('test2.png')
+xml = pytesseract.image_to_alto_xml('test3.png')
 
 # getting multiple types of output with one call to save compute time
 # currently supports mix and match of the following: txt, pdf, hocr, box, tsv
-text, boxes = pytesseract.run_and_get_multiple_output('test2.png', extensions=['txt', 'box'])
+text, boxes = pytesseract.run_and_get_multiple_output('test3.png', extensions=['txt', 'box'])
