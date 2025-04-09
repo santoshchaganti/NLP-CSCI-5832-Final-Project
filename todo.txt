@@ -1,0 +1,6 @@
+OCR:
+Works fine using tesseract
+Try optimizations for images
+Use specialized OCR if needed
+
+Translation:
