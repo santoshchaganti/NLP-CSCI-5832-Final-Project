@@ -9,3 +9,6 @@ persian/hindi/portuguese to english
 english to persian/hindi/portuguese
 how much data is needed
 clean text datasets to standardize before training
+
+Dataset cleaning:
+Put all datasets in the same format and include in repo
