@@ -18,8 +18,10 @@ print(pytesseract.image_to_string('test3.png'))
 # List of available languages
 print(pytesseract.get_languages(config=''))
 
-# French text image to string
-print(pytesseract.image_to_string(Image.open('test3.png'), lang='eng'))
+# Test languages
+print(pytesseract.image_to_string(Image.open('test-por.png'), lang='por'))
+print(pytesseract.image_to_string(Image.open('test-hin.png'), lang='hin'))
+print(pytesseract.image_to_string(Image.open('test-fas.png'), lang='fas'))
 
 # Batch processing with a single file containing the list of multiple image file paths
 #print(pytesseract.image_to_string('images.txt'))
