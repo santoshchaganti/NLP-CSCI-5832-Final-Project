@@ -4,3 +4,8 @@ Try optimizations for images
 Use specialized OCR if needed
 
 Translation:
+What transformer to use
+persian/hindi/portuguese to english
+english to persian/hindi/portuguese
+how much data is needed
+clean text datasets to standardize before training
